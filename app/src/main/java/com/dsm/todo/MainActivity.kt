@@ -18,19 +18,3 @@ class MainActivity : ComponentActivity() {
         setContentView(R.layout.activity_main)
     }
 }
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    TodoTheme {
-        Greeting("Android")
-    }
-}
