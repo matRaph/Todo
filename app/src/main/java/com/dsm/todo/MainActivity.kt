@@ -1,5 +1,6 @@
 package com.dsm.todo
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import android.widget.Button
@@ -13,29 +14,20 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.dsm.todo.databinding.ActivityMainBinding
 import com.dsm.todo.ui.theme.TodoTheme
 
 class MainActivity : ComponentActivity() {
 
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val addTodoButton = findViewById(R.id.addTodoButton) as Button
-
-        //TODO: Declarar navController
-
-        // set on-click listener
-        addTodoButton.setOnClickListener {
-            // your code to perform when the user clicks on the button
-            //navController.navigate(R.id.action_mainActivity_to_addTodoActivity)
+        binding.addBtn.setOnClickListener {
+            val intent = Intent(this, AddTodoActivity::class.java)
+        startActivity(intent)
         }
-    }
-}
-
-class AddTodoActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.criar_todo)
     }
 }

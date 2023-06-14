@@ -15,6 +15,7 @@
             android:id="@+id/action_mainActivity_to_addTodoActivity"
             app:destination="@id/addTodoActivity" />
     </fragment>
+
     <fragment
         android:id="@+id/addTodoActivity"
         android:name="com.dsm.todo.AddTodoActivity"
