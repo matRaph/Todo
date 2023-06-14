@@ -44,4 +44,27 @@
             android:src="@drawable/ic_plus" />
 
     </FrameLayout>
+
+    <TextView
+        android:id="@+id/titleListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seus todos"
+        android:textColor="#9C27B0"
+        android:textSize="20sp"
+        android:layout_below="@id/headerTextView"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/todoListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="100dp"
+        android:layout_below="@id/titleListView"
+        android:layout_marginTop="16dp"
+        android:divider="#209C27B0"
+        android:dividerHeight="0.5dp"
+        />
 </RelativeLayout>

@@ -13,6 +13,10 @@
         android:theme="@style/Theme.Todo"
         tools:targetApi="31">
         <activity
+            android:name=".TodoDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:exported="false" />
+        <activity
             android:name=".AddTodoActivity"
             android:theme="@style/Theme.AppCompat.Light"
             android:exported="false" />

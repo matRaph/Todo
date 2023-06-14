@@ -1,7 +1,7 @@
 package com.dsm.todo.model
 
-class Todo(
-    val id: Int,
+data class Todo(
+    val id: Long,
     val title: String,
     val description: String,
 )
